@@ -42,8 +42,6 @@ for (let index = 0; index < letterArray.length * 3; index++) {
     const appendP = document.createElement("p");
     appendP.style.margin = "0";
     
-
-    
     indexOpacityZero.includes(index) ? (appendP.style.backgroundColor = "rgba(255, 0, 0, 0)", index % 2 === 0 ? appendP.style.color = "white" : "black" ) : index % 2 === 0 ? (appendP.style.color = "white", appendP.style.backgroundColor = "black") : (appendP.style.backgroundColor = "white",appendP.style.color = "black")
 
     index < (letterArray.length) ? (appendP.textContent = `${index}`, rowOne.appendChild(appendP)) : index >= letterArray.length && index < letterArray.length * 2 ? (appendP.textContent = `${index - letterArray.length}`, rowTwo.appendChild(appendP)) : (appendP.textContent = `${letterArray[index - 20]}`, rowThree.appendChild(appendP));
